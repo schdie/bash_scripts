@@ -22,4 +22,4 @@ NEWTAGFOLDER="v0"
 find "$FLACFOLDER" -iname '*.flac' -exec bash -c 'D=$(dirname "{}"); B=$(basename "{}"); output_dir=$(echo "$D" | sed -e "s/\[.*\]/\['"$NEWTAGFOLDER"'\]/g"); mkdir -p "$output_dir"; ffmpeg -i "{}$FFMPEGPARAMV0" "$output_dir/${B%.*}.mp3"' \;
 
 # move the [v0] folders, remove the "-i" if you don't want it to be interactive
-mv -i "$FLACFOLDER"*[v0]*/ "$MP3FOLDER"
+mv -i "$FLACFOLDER"*\[v0\]*/ "$MP3FOLDER"
