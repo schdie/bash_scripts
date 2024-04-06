@@ -12,7 +12,7 @@ FLACFOLDER="/home/user/my_flacs_folder/"
 MP3FOLDER="/home/user/my_mp3s_folder/"
 
 # ffmpeg codec paramenters
-FFMPEGPARAMV0=" -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 "
+FFMPEGPARAMV0=" -codec:a libmp3lame -q:a 0 -map a -id3v2_version 3 -write_id3v1 1 "
 NEWTAGFOLDER="v0"
 
 # fun testing
